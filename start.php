@@ -26,7 +26,7 @@ if(isset($_GET["page"]) ){
 }
 //de Login controller die de pagina gaat tonen  
 else{
-    $paginaData->content .=  include_once "controller/loginviewcontroller.php";
+    $paginaData->content .=  include_once "controller/loginpagecontroller.php";
 } 
 
 //pagina tonen
