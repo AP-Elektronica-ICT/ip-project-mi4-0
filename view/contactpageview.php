@@ -10,7 +10,7 @@
 <div class="topnav">
   <a  href="start.php?page=monitorpagecontroller">Monitor</a>
   <a href="#Control">Control</a>
-  <a href="#">Ground Plan</a>
+  <a href="start.php?page=groundplanpagecontroller">Ground Plan</a>
   <a class="active" href="javascript:location.reload(true)" >Contact</a>
 </div>
 

@@ -21,7 +21,7 @@
 <div class="topnav">
   <a class="active" href="javascript:location.reload(true)">Monitor</a>
   <a href="#Control">Control</a>
-  <a href="#">Ground Plan</a>
+  <a href="start.php?page=groundplanpagecontroller">Ground Plan</a>
   <a href="start.php?page=contactpagecontroller">Contact</a>
 </div>
 
