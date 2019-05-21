@@ -1,7 +1,5 @@
-*{
-    color: red;
-}
 body {
+  margin: 0px;
   font-family: "Lato", sans-serif;
 }
 li{
@@ -19,6 +17,7 @@ div{
 .topnav {
   overflow: hidden;
   background-color: #333;
+    position: static;
 }
 .topnav a {
   float: left;
@@ -40,21 +39,35 @@ div{
     
 }
 
-.Column a {
-    text-decoration:none;
-}
-.Row
-{
-    display: table;
-    width: 100%; /*Optional*/
-    table-layout: fixed; /*Optional*/
-    /*border-spacing: 20px; Optional*/
-}
-.Column
-{
-    display: table-cell;
-    background-color: royalblue; /*Optional*/
-    text-align: center;
-    padding-top: 20px;
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 172px;
+  background-color: #f1f1f1;
+  position: static;
+  float: left;
+  height: 100%;
+  overflow: auto;
 }
 
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+.sidebar a.active {
+  background-color: orange;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}

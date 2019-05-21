@@ -15,12 +15,12 @@
 </div>
 
 <div class="sidebar">
-  <a href="">Floor 1</a>
-  <a class="active" href="">Floor 2</a>
-  <a href="">Floor 3</a>
-  <a href="">Floor 4</a>
-  <a href="">Floor 5</a>
-  <a href="">Floor 6</a>
+  <a href="start.php?page=grndFl1pagecontroller">Floor 1</a>
+  <a class="active" href="javascript:location.reload(true)">Floor 2</a>
+  <a href="start.php?page=grndFl3pagecontroller">Floor 3</a>
+  <a href="start.php?page=grndFl4pagecontroller">Floor 4</a>
+  <a href="start.php?page=grndFl5pagecontroller">Floor 5</a>
+  <a href="start.php?page=grndFl6pagecontroller">Floor 6</a>
 </div>
 
 </body>
