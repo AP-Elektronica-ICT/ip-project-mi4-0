@@ -18,7 +18,7 @@
   <a class="active" href="">Floor 1</a>
   <a href="">Floor 2</a>
   <a href="">Floor 3</a>
-  <a href="">Floor 4</a>
+  <a class="active" href="">Floor 4</a>
   <a href="">Floor 5</a>
   <a href="">Floor 6</a>
 </div>

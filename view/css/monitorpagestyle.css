@@ -1,31 +1,25 @@
 <style>
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
-    li{
-        height: 50px;
-        list-style: none;
-        text-align: left;
-        border: 1px solid black;
-        padding: 5px;
-        margin: 5px;
-        line-height: 50px;
-       
-    }
-    div{
-       margin-right: 50px;
-        
-    }
-.Column a {
-    text-decoration:none;
+li{
+    height: 50px;
+    list-style: none;
+    text-align: left;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    line-height: 50px;  
 }
-
+div{
+   margin-right: 50px;
+}
 .topnav {
   overflow: hidden;
   background-color: #333;
 }
-
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -45,12 +39,16 @@ body {
   color: white;
     
 }
+
+.Column a {
+    text-decoration:none;
+}
 .Row
 {
     display: table;
     width: 100%; /*Optional*/
     table-layout: fixed; /*Optional*/
-    border-spacing: 20px; /*Optional*/
+    /*border-spacing: 20px; Optional*/
 }
 .Column
 {
