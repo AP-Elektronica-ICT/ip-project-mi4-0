@@ -5,7 +5,7 @@ class SensorClass{
     private $dbname = "mi40db";
     private $dbHostName = "root";
     private $dbPassword = "";
-    private $con;
+    public $con;
     //connectie make met de database
     
     public function __construct(){
