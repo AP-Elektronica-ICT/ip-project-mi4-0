@@ -13,7 +13,7 @@
     <head>
 <link rel="stylesheet" type="text/css" href="view/css/monitorpagestyle.css"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HomePage</title>
+<title>MonitorPage</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 <div class="topnav">
   <a class="active" href="javascript:location.reload(true)">Monitor</a>
   <a href="#Control">Control</a>
-  <a href="start.php?page=groundplanpagecontroller">Ground Plan</a>
+  <a href="start.php?page=grndFl1pagecontroller">Ground Plan</a>
   <a href="start.php?page=contactpagecontroller">Contact</a>
 </div>
 

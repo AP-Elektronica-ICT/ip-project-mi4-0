@@ -17,7 +17,7 @@ div{
 .topnav {
   overflow: hidden;
   background-color: #333;
-    position: static;
+  position: static;
 }
 .topnav a {
   float: left;
@@ -72,6 +72,87 @@ div.content {
   height: 1000px;
 }
 
+img {
+    border: 2px solid black;
+    
+}
+
+#container {
+    position: relative;    
+}
+#container div{
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+   background-color: white; 
+  color: black; 
+  border: 2px solid black;
+   position: absolute;
+    
+}
+    
+#container div:hover{
+   background-color: orange;
+  color: white;
+   position: absolute;
+}
+    #container div a{
+        text-decoration: none;
+        color: black;
+    }
+.plattegrond{
+   margin-left: 172px;        
+}
+
+#room1 {
+   top: 340px;
+   left: 190px; 
+}
+#room2 {
+   top: 470px;
+   left: 170px; 
+}
+#room3 {
+   top: 600px;
+   left: 150px; 
+}
+#room4 {
+   top: 760px;
+   left: 235px; 
+}
+#room5 {
+   top: 760px;
+   left: 400px; 
+}
+#room6 {
+   top: 400px;
+   left: 400px; 
+}
+#room7 {
+   top: 500px;
+   left: 400px; 
+}
+#room8 {
+   top: 500px;
+   left: 540px; 
+}
+
+#room9 {
+   top: 610px;
+   left: 560px; 
+}
+#room10 {
+   top: 510px;
+   left: 880px; 
+}
+    
+    
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
@@ -87,5 +168,4 @@ div.content {
     text-align: center;
     float: none;
   }
-
-
+ 
