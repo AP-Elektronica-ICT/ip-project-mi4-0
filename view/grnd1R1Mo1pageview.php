@@ -23,7 +23,7 @@
 <script src="https://www.amcharts.com/lib/4/charts.js"></script>
 <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 <!-- Chart code -->
-
+ 
 <script>
 am4core.ready(function() {
 
@@ -34,18 +34,23 @@ am4core.useTheme(am4themes_animated);
 // Create chart instance
 var chart1 = am4core.create("chartdiv1", am4charts.XYChart);
 var chart2 = am4core.create("chartdiv2", am4charts.XYChart);
+var chart3 = am4core.create("chartdiv3", am4charts.XYChart);
 // Add data
 chart1.data = generateChartData1();
-// chart2.data = generateChartData2();
+chart2.data = generateChartData2();
+chart3.data = generateChartData3();
 
 // Create axes
 var dateAxis1 = chart1.xAxes.push(new am4charts.DateAxis());
-var dateAxis2 = chart2.xAxes.push(new am4charts.DateAxis());    
+var dateAxis2 = chart2.xAxes.push(new am4charts.DateAxis());
+var dateAxis3 = chart3.xAxes.push(new am4charts.DateAxis());
 dateAxis1.renderer.minGridDistance = 50;
 dateAxis2.renderer.minGridDistance = 50;
+dateAxis3.renderer.minGridDistance = 50;
 
 var valueAxis1 = chart1.yAxes.push(new am4charts.ValueAxis());
 var valueAxis2 = chart2.yAxes.push(new am4charts.ValueAxis());
+var valueAxis3 = chart3.yAxes.push(new am4charts.ValueAxis());
 
 // Create series 1
 var series1 = chart1.series.push(new am4charts.LineSeries());
@@ -115,6 +120,36 @@ function generateChartData1() {
     }
     return chartData;
 }
+function generateChartData2() {
+    var chartData2 = [];
+       
+    var sqlarray2 = <?php echo json_encode($array); ?>;
+    
+    const tijd2 = "<?php echo $humi1['NowTimeDate'] ?>";
+    var t2 = tijd2.split(/[- :]/);
+        //
+    var firstDate2 = new Date(Date.UTC(t2[0], t2[1]-1, t2[2], t2[3], t2[4], t2[5]));
+    firstDate2.setDate(firstDate2.getDate());
+    var waarde2 = 500;
+    // checks how many data are there in a row, so how many days
+    var totaaldata2 = "<?php echo $humi2['total'] ?>";
+    for (var i = 0; i < totaaldata2 ; i++) {
+        // we create date objects here. In your data, you can have date strings
+        // and then set format of your dates using chart.dataDateFormat property,
+        // however when possible, use date objects, as this will speed up chart rendering.
+        var newDate2 = new Date(firstDate2);
+        newDate2.setDate(newDate2.getDate() + i ); 
+        
+        
+        waarde = sqlarray2[i] ; 
+        
+        chartData2.push({
+            date: newDate2,
+            waarde: waarde2
+        });
+    }
+    return chartData2;
+}
 
 }); // end am4core.ready()
 </script>
@@ -123,6 +158,11 @@ function generateChartData1() {
 
 <style>
     #chartdiv1 {
+  width: 70%;
+  height: 400px;
+overflow: auto;
+} 
+    #chartdiv2 {
   width: 70%;
   height: 400px;
 overflow: auto;
