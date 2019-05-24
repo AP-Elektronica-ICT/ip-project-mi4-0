@@ -1,104 +1,12 @@
-<?php
-            include_once 'model/SensorModel.php';
-            $SensorModel = new SensorClass();
-            $sql1 = "SELECT * FROM humidity ORDER BY NowTimeDate DESC LIMIT 1";
-            $sql2 = "SELECT count(*) as total from humidity";
-            $humi1 = $SensorModel-> HumiditySensor($sql1); 
-            $humi2 = $SensorModel-> HumiditySensor($sql2); 
 
-            
-?>
 <html>
     <head>
 <link rel="stylesheet" type="text/css" href="view/css/grndF1Roomspagestyle.css"> 
 <!-- Resources -->
-<script src="https://www.amcharts.com/lib/4/core.js"></script>
-<script src="https://www.amcharts.com/lib/4/charts.js"></script>
-<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-<!-- Chart code -->
-
-<script>
-am4core.ready(function() {
-
-// Themes begin
-am4core.useTheme(am4themes_animated);
-// Themes end
-
-// Create chart instance
-var chart = am4core.create("chartdiv", am4charts.XYChart);
-
-// Add data
-chart.data = generateChartData();
-
-// Create axes
-var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-dateAxis.renderer.minGridDistance = 50;
-
-var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-
-// Create series
-var series = chart.series.push(new am4charts.LineSeries());
-series.dataFields.valueY = "waarde";
-series.dataFields.dateX = "date";
-series.strokeWidth = 2;
-series.minBulletDistance = 10;
-series.tooltipText = "{valueY}";
-series.tooltip.pointerOrientation = "vertical";
-series.tooltip.background.cornerRadius = 20;
-series.tooltip.background.fillOpacity = 0.5;
-series.tooltip.label.padding(12,12,12,12)
-
-// Add scrollbar
-chart.scrollbarX = new am4charts.XYChartScrollbar();
-chart.scrollbarX.series.push(series);
-
-// Add cursor
-chart.cursor = new am4charts.XYCursor();
-chart.cursor.xAxis = dateAxis;
-chart.cursor.snapToSeries = series;
-
-function generateChartData() {
-    var chartData = [];
-       
-    var sqlarray = <?php echo json_encode($array); ?>;
-    
-        const tijd = "<?php echo $humi1['NowTimeDate'] ?>";
-        var t = tijd.split(/[- :]/);
-        //
-    var firstDate = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
-    firstDate.setDate(firstDate.getDate());
-    var waarde = 500;
-    // checks how many data are there in a row, so how many days
-    var totaaldata = "<?php echo $humi2['total'] ?>";
-    for (var i = 0; i < totaaldata ; i++) {
-        // we create date objects here. In your data, you can have date strings
-        // and then set format of your dates using chart.dataDateFormat property,
-        // however when possible, use date objects, as this will speed up chart rendering.
-        var newDate = new Date(firstDate);
-        newDate.setDate(newDate.getDate() + i ); 
-        
-        
-        waarde = sqlarray[i] ; 
-        
-        chartData.push({
-            date: newDate,
-            waarde: waarde
-        });
-    }
-    return chartData;
-}
-
-}); // end am4core.ready()
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ground Plan</title>
 
 <style>
-    #chartdiv {
-  width: 70%;
-  height: 400px;
-overflow: auto;
-}
     .main-section{
 	width:80%;
 	margin:0 auto;
@@ -107,7 +15,7 @@ overflow: auto;
 	margin-top:30px;
 	margin-right: 10px;
 	display: inline-block;
-	width:30%;
+	width:60%;
 	color:#fff;
 	border-radius: 3px;
 }
@@ -208,7 +116,6 @@ overflow: auto;
   <a href="start.php?page=grndFl5pagecontroller">Floor 5</a>
   <a href="start.php?page=grndFl6pagecontroller">Floor 6</a>
 </div>
-<div id="chartdiv"></div>
 <div class="main-section">
 		<div class="dashbord email-content">
 			<div class="title-section">
