@@ -1,0 +1,57 @@
+
+li{
+    height: 50px;
+    list-style: none;
+    text-align: left;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    line-height: 50px;  
+}
+div{
+   margin-right: 50px;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+img {
+    border: 2px solid black;
+    
+}
+
+#container {
+    position: relative;    
+}
+#container div{
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+   background-color: white; 
+  color: black; 
+  border: 2px solid black;
+   position: absolute;
+    
+}
+    
+#container div:hover{
+   background-color: orange;
+  color: white;
+   position: absolute;
+}
+    #container div a{
+        text-decoration: none;
+        color: black;
+    }
+.plattegrond{
+   margin-left: 172px;        
+}

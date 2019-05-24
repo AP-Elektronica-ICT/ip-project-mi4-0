@@ -11,6 +11,7 @@
   
    <html>
     <head>
+<link rel="stylesheet" type="text/css" href="view/css/bovenmenu.css"> 
 <link rel="stylesheet" type="text/css" href="view/css/monitorpagestyle.css"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MonitorPage</title>
@@ -18,13 +19,11 @@
 
 <body>
 
-<div class="topnav">
-  <a class="active" href="javascript:location.reload(true)">Monitor</a>
-  <a href="#Control">Control</a>
-  <a href="start.php?page=grndFl1pagecontroller">Ground Plan</a>
-  <a href="start.php?page=contactpagecontroller">Contact</a>
-</div>
-
+<?php 
+    include_once 'model/menumodel.php';  
+    $bovenStuk = new MenuClass();
+    $bovenStuk-> bovenmenu('active','','','');
+?>
 <div class="Row">
     <div class="Column">
     Average Temparature (degrees)
