@@ -1,19 +1,17 @@
 
 <head>
-<link rel="stylesheet" type="text/css" href="view/css/monitorpagestyle.css"> 
+<link rel="stylesheet" type="text/css" href="view/css/bovenmenu.css"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact</title>
 </head>
 
 <body>
 
-<div class="topnav">
-  <a href="start.php?page=monitorpagecontroller">Monitor</a>
-  <a href="#Control">Control</a>
-  <a href="start.php?page=grndFl1pagecontroller">Ground Plan</a>
-  <a class="active" href="javascript:location.reload(true)" >Contact</a>
-</div>
-
+<?php 
+    include_once 'model/menumodel.php';  
+    $bovenStuk = new MenuClass();
+    $bovenStuk-> bovenmenu('','','active');
+?>
 
 
 </body>
