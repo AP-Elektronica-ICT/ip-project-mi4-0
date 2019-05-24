@@ -1,27 +1,3 @@
-<?php
-            include_once '../model/SensorModel.php';
-            $SensorModel = new SensorClass();
-            $sql1 = "SELECT * FROM humidity ORDER BY NowTimeDate DESC LIMIT 1";
-            $sql2 = "SELECT count(*) as total from humidity";
-            $humi1 = $SensorModel-> HumiditySensor($sql1); 
-            $humi2 = $SensorModel-> HumiditySensor($sql2); 
-            $connection = new mysqli("127.0.0.1", "root", "", "mi40db", 3306);
-            $query = $connection->query("SELECT HumiFloor1 FROM humidity ");
-            $array = Array();
-            while($result1 = $query->fetch_assoc()){
-                $array[] = $result1['HumiFloor1'];
-            }     
-
-?>
-
-
-<html>
-    <head>
-<link rel="stylesheet" type="text/css" href="../view/css/grndF1Roomspagestyle.css"> 
-<!-- Resources -->
-<script src="https://www.amcharts.com/lib/4/core.js"></script>
-<script src="https://www.amcharts.com/lib/4/charts.js"></script>
-<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
 <!-- Chart code -->
  
@@ -154,43 +130,3 @@ function generateChartData2() {
 
 }); // end am4core.ready()
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ground Plan</title>
-
-<style>
-    #chartdiv1 {
-  width: 70%;
-  height: 400px;
-overflow: auto;
-} 
-    #chartdiv2 {
-  width: 70%;
-  height: 400px;
-overflow: auto;
-} 
-</style>
-</head>
-
-<body>
-<div class="topnav">
-  <a href="start.php?page=monitorpagecontroller">Monitor</a>
-  <a href="#Control">Control</a>
-  <a class="active" href="javascript:location.reload(true)">Ground Plan</a>
-  <a href="start.php?page=contactpagecontroller">Contact</a>
-</div>
-
-<div class="sidebar">
-  <a class="active" href="javascript:location.reload(true)">Floor 1</a>
-  <a href="start.php?page=grndFl2pagecontroller">Floor 2</a>
-  <a href="start.php?page=grndFl3pagecontroller">Floor 3</a>
-  <a href="start.php?page=grndFl4pagecontroller">Floor 4</a>
-  <a href="start.php?page=grndFl5pagecontroller">Floor 5</a>
-  <a href="start.php?page=grndFl6pagecontroller">Floor 6</a>
-</div>
-<div id="chartdiv1"></div>
-<div id="chartdiv2"></div>
-
-       
-</body>
-    
-</html>
