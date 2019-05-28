@@ -2,8 +2,15 @@
 
 $output = "";
 
-
 session_start();
+//zodat je geen blanco pagina krijgt als je opnieuw op de monitorpagecontroller bent door dat je niet weer hebt ingelogd.
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    $output = include_once "view/monitorpageview.php";
+    return $output;
+} else {
+    echo "Please log in first to see this page.";
+}
+
 
 //when the button is pressed
 if(isset($_POST["submituser"])){
@@ -21,23 +28,22 @@ if(isset($_POST["submituser"])){
     if($Check)
     { 
         
-       
+        
         $output = include_once "view/monitorpageview.php";
-        $_SESSION['user_name'] = $name;
+        $_SESSION['loggedin'] = true;
         
     }
     else
     {
-         $output = include_once "view/Gelukt.php";
+         $output = include_once "view/mislukt.php";
     }
     
     
     
 }
-//zodat je geen blanco pagina krijgt als je opnieuw op de monitorpagecontroller bent door dat je niet weer hebt ingelogd.
-if(isset($_SESSION['user_name'])){
-        $output = include_once "view/monitorpageview.php"; 
-    }
+
+
+
 
 
 

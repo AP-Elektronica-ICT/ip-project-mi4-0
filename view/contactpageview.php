@@ -12,6 +12,12 @@
     $bovenStuk = new MenuClass();
     $bovenStuk-> bovenmenu('','','active');
 ?>
-
-
+<!--Section: Contact v.2-->
+<h1>
+    Contact : Admin
+    <br>
+    Number : xxx
+    <br>
+    location : ISP Gaya
+</h1>
 </body>
