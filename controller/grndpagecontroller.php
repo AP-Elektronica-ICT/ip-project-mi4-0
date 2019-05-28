@@ -7,15 +7,15 @@
 
     $room = $_GET["room"];
     $connection = new mysqli("35.195.134.226", "mi40", "root", "mi40db", 3306);
-            $query1 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 1 ORDER BY NowTimeDate asc ");
-            $query2 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 2 ORDER BY NowTimeDate asc");
-            $query3 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 3 ORDER BY NowTimeDate asc");
-            $query4 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 4 ORDER BY NowTimeDate asc");
-            $query5 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 5 ORDER BY NowTimeDate asc");
-            $query6 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 6 ORDER BY NowTimeDate asc");
-            $query7 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 7 ORDER BY NowTimeDate asc ");
-            $query8 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 8 ORDER BY NowTimeDate asc ");
-            $query9 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 9 ORDER BY NowTimeDate asc ");
+            $query1 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 1 ORDER BY NowTimeDate desc ");
+            $query2 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 2 ORDER BY NowTimeDate desc");
+            $query3 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 3 ORDER BY NowTimeDate desc");
+            $query4 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 4 ORDER BY NowTimeDate desc");
+            $query5 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 5 ORDER BY NowTimeDate desc");
+            $query6 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 6 ORDER BY NowTimeDate desc");
+            $query7 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 7 ORDER BY NowTimeDate desc ");
+            $query8 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 8 ORDER BY NowTimeDate desc ");
+            $query9 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 9 ORDER BY NowTimeDate desc ");
             $result1 = $query1->fetch_assoc();
             $result2 = $query2->fetch_assoc();
             $result3 = $query3->fetch_assoc();

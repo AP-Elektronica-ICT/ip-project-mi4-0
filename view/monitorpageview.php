@@ -1,8 +1,8 @@
 <?php
             $connection = new mysqli("35.195.134.226", "mi40", "root", "mi40db", 3306);
-            $query1 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 1 ORDER BY NowTimeDate asc ");
-            $query2 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 2 ORDER BY NowTimeDate asc");
-            $query3 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 3 ORDER BY NowTimeDate asc");
+            $query1 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 1 ORDER BY NowTimeDate desc ");
+            $query2 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 2 ORDER BY NowTimeDate desc");
+            $query3 = $connection->query("SELECT *  FROM sensor s,modulesroom m WHERE s.sensor_id = 3 ORDER BY NowTimeDate desc");
             $result1 = $query1->fetch_assoc();
             $result2 = $query2->fetch_assoc();
             $result3 = $query3->fetch_assoc();
