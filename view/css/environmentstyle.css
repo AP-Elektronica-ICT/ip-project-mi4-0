@@ -1,0 +1,11 @@
+    #chart {
+  max-width: 80%;
+  margin: 35px auto;
+  opacity: 0.9;
+ overflow: auto;
+}
+
+#timeline-chart .apexcharts-toolbar {
+  opacity: 1;
+  border: 0;
+}
