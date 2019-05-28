@@ -1,73 +1,25 @@
-body {
-  margin: 0px;
-  font-family: "Lato", sans-serif;
+#room46 {
+   top: 180px;
+   left: 300px; 
 }
-li{
-    height: 50px;
-    list-style: none;
-    text-align: left;
-    border: 1px solid black;
-    padding: 5px;
-    margin: 5px;
-    line-height: 50px;  
+#room47 {
+   top: 600px;
+   left: 180px; 
 }
-div{
-   margin-right: 50px;
+#room48 {
+   top: 600px;
+   left: 450px; 
 }
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-    position: static;
+#room49 {
+   top: 600px;
+   left: 630px; 
 }
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+#room50 {
+   top: 600px;
+   left: 880px; 
+}
+#room51 {
+   top: 600px;
+   left: 1100px; 
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: orange;
-  color: white;
-    
-}
-
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 172px;
-  background-color: #f1f1f1;
-  position: static;
-  float: left;
-  height: 100%;
-  overflow: auto;
-}
-
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
-.sidebar a.active {
-  background-color: orange;
-  color: white;
-}
-
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
