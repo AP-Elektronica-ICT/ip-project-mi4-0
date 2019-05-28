@@ -6,13 +6,13 @@
     $room = $_GET["room"];
     $module = $_GET["module"];
     if($module == 1){
-        $output = include_once "view/text1.php";
+        $output = include_once "view/module1view.php";
     }
     else if($module == 2){
-        $output = include_once "view/text2.php";
+        $output = include_once "view/module2view.php";
     }
     else if($module == 3){
-        $output = include_once "view/text3.php";
+        $output = include_once "view/module3view.php";
     }
     return $output;
 
