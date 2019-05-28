@@ -6,16 +6,21 @@ $paginaData = new stdClass();
 //navigation 
 $paginaData ->content = "";
 
-
 //database info
-$dbInfo="mysql:host=127.0.0.1;dbname=mi40db";
-$dbUser ="root";
-$dbPassword ="";
+$dbInfo="mysql:host=35.195.134.226;dbname=mi40db";
+$dbUser ="mi40";
+$dbPassword ="root";
 //connectie maken met de database
 try{
     $db = new PDO($dbInfo,$dbUser,$dbPassword);
 }
 catch (Exception $e){
+    print_r($dbInfo);
+    print_r("...");
+    print_r($dbUser);
+    print_r("...");
+    print_r($dbPassword);
+    
 }
 
 //zien of er een url(page) gestuurd is naar de start.php
