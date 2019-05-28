@@ -1,10 +1,11 @@
 <?php
 
 class SensorClass{
-    private $dbIpHost = "localhost";
+    
+    private $dbIpHost = "35.195.134.226";
     private $dbname = "mi40db";
-    private $dbHostName = "root";
-    private $dbPassword = "";
+    private $dbHostName = "mi40";
+    private $dbPassword = "root";
     public $con;
     //connectie make met de database
     
