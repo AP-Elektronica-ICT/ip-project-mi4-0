@@ -9,7 +9,7 @@ class LoginClass{
     }
     //kijk of de naam of password zitten dat zal je een 1 geven 
     public function CheckLogin($usr,$pwd){
-        $sql = "select count(*) as amount from user where username ='$usr' and password='$pwd'";
+        $sql = "select count(*) as amount from user where user_name ='$usr' and user_password='$pwd'";
     //uitvoeren sql
     $statement=$this->db->prepare($sql);
     $statement->execute();
